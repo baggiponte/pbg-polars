@@ -260,14 +260,24 @@ Lazy mode operations are not evaluated by default, so you need to either:
 ---
 
 ## ⚡Unique features
-Stuff we can't dive into but we might use
+Stuff we will go over
 
 * Great support for nested data types: operations benefit from the query engine!
 * Window functions (we shall use those).
 * Streaming engine: can work with data larger than memory.
   * Just call `collect(streaming=True)`. No changes in API.
+
+
+---
+
+## ⚡Unique features
+Stuff we can't go over right now
+
 * Can use [SQL](https://pola-rs.github.io/polars/user-guide/sql/intro/)!
 * There is a [CLI](https://github.com/pola-rs/polars-cli?tab=readme-ov-file#polars-cli) too.
+* Polars plugins! Can write your own Rust extensions and hook them inside Polars query engine for incredible speed.
+  * More on this next week. No Rust, I promise.
+
 
 ---
 
