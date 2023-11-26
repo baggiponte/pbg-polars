@@ -181,17 +181,111 @@ This will actually just read from the parquet file the first 5 rows that meet th
 
 ---
 
+# 🏗️ Polars fundamentals: contexts and expressions
+Two key ingredients
+
+Polars syntax is more expressive than `pandas`. It revolves around two fundamental concepts:
+
+* **Contexts** where expressions are optimised.
+* **Expressions**, which are building blocks that describe data transformations.
+
+---
+
+# 🏗️ Polars fundamentals: contexts and expressions
+Contexts
+
+Here are the four contexts. Contexts are called on the data, and can be chained:
+
+```python
+data.select(...)
+
+data.with_columns(...)
+
+data.groupby(...).agg(...)
+
+data.filter(...)
+```
+
+---
+
+# 🏗️ Polars fundamentals: contexts and expressions
+Expressions
+
+Can live outside of data but need a context to run an operation.
 
 
+```python
+pl.col("a").sum()
+pl.col("a", "b").unique()
+pl.all().mean()
+pl.all().exclude("b").std()
+pl.col(pl.Datetime)
+```
+
+The expression syntax is very broad - as much as `pandas`'.
 
 
 ---
 
-# Unique features
+## 😴 Lazy and eager mode
+What does this mean?
 
-* `over()`
-* streaming engine
+Polars has two modes: *eager* and *lazy*.
 
+Eager mode like pandas: every operation is performed sequentially, with limited optimisations.
+
+Lazy mode is where Polars shines.
+
+---
+
+## 😴 Lazy and eager mode
+Enabling lazy mode
+
+Lazy mode can be entered by:
+
+* Reading a dataset with `scan_*` functions instead of `read_*`.
+* Calling `DataFrame.lazy()` on an eager DataFrame.
+
+---
+
+## 😴 Lazy and eager mode
+Enabling lazy mode
+
+Lazy mode operations are not evaluated by default, so you need to either:
+
+* Call `LazyFrame.collect()` to run the operations.
+* Call `LazyFrame.sink_*("path/to/destination)` to write the files to disk.
+
+
+---
+
+## ⚡Unique features
+Stuff we can't dive into but we might use
+
+* Great support for nested data types: operations benefit from the query engine!
+* Window functions (we shall use those).
+* Streaming engine: can work with data larger than memory.
+  * Just call `collect(streaming=True)`. No changes in API.
+* Can use [SQL](https://pola-rs.github.io/polars/user-guide/sql/intro/)!
+* There is a [CLI](https://github.com/pola-rs/polars-cli?tab=readme-ov-file#polars-cli) too.
+
+---
+
+## 🥲 Weaknesses
+Some things that need improving
+
+* SQL support might be better in DuckDB, but Polars is catching up fast.
+* Supports reading from remote storages. Still a new features so DuckDB can be faster, but is rapidly improving.
+* JSON support is limited (DuckDB might be better).
+* Frequent releases. `0.19` series has a few breaking changes.
+  * Should be the latest minor before going stable.
+
+
+---
+
+## ⚠️ Dangerous live coding
+
+Let's get our hands dirty!
 
 ---
 layout: intro
