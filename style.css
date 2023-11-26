@@ -5,7 +5,7 @@ h1 {
 h2 {
   font-weight: 450 !important;
   line-height: 1.8 !important;
-  margin-bottom: 30px !important;
+  margin-bottom: 10px !important;
 }
 
 blockquote {
@@ -18,7 +18,7 @@ p {
   margin-bottom: 30px !important;
 }
 
-ul {
+ul, ol {
   font-size: 25px !important;
   line-height: 1.2 !important;
   margin-bottom: 10px !important;
