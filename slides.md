@@ -189,6 +189,7 @@ Polars syntax is more expressive than `pandas`. It revolves around two fundament
 * **Contexts** where expressions are optimised.
 * **Expressions**, which are building blocks that describe data transformations.
 
+
 ---
 
 # 🏗️ Polars fundamentals: contexts and expressions
@@ -205,6 +206,7 @@ data.groupby(...).agg(...)
 
 data.filter(...)
 ```
+
 
 ---
 
@@ -236,6 +238,7 @@ Eager mode like pandas: every operation is performed sequentially, with limited 
 
 Lazy mode is where Polars shines.
 
+
 ---
 
 ## 😴 Lazy and eager mode
@@ -245,6 +248,7 @@ Lazy mode can be entered by:
 
 * Reading a dataset with `scan_*` functions instead of `read_*`.
 * Calling `DataFrame.lazy()` on an eager DataFrame.
+
 
 ---
 
@@ -296,6 +300,7 @@ Some things that need improving
 ## ⚠️ Dangerous live coding
 
 Let's get our hands dirty!
+
 
 ---
 layout: intro
