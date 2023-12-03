@@ -4,7 +4,7 @@ layout: cover
 highlighter: shiki
 colorSchema: light
 favicon: favicon/url
-title: "Polars: the definitive DataFrame library"
+title: 'Polars: the definitive DataFrame library'
 ---
 
 # 🐻‍❄️ Polars
@@ -178,6 +178,7 @@ A list of operations is *compiled* into a *plan* that is optimised. For example:
 And many more. For a more thorough overview, watch [Polars' creator latest talk at PyData Amsterdam](https://www.youtube.com/watch?v=NJbBWDzZuWs)
 
 </v-click>
+
 
 ---
 
