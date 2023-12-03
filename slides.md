@@ -4,7 +4,7 @@ layout: cover
 highlighter: shiki
 colorSchema: light
 favicon: favicon/url
-title: Polars and functime
+title: "Polars: the definitive DataFrame library"
 ---
 
 # 🐻‍❄️ Polars

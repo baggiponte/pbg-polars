@@ -1,10 +1,10 @@
-# Polars And Functime
+# Polars: the definitive DataFrame library
 
 [![cookiecutter slidev](https://img.shields.io/badge/cookiecutter-slidev-D4AA00?logo=cookiecutter&logoColor=fff)](https://github.com/baggiponte/cookiecutter-slidev)
 
-Source code for the talks *Polars And Functime* at Python Biella Group.
+Source code for the talks *Polars: the definitive DataFrame library* at [Python Biella Group](https://pythonbiellagroup.it/en/).
 
-- 📽️ [Live]()
+- 📽️ [Introduction to Polars](https://www.youtube.com/watch?v=_63lctyG2U8)
 
 ## 🛩️ How to run
 
