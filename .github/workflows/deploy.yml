@@ -32,7 +32,7 @@ jobs:
         run: npx slidev build --base=/pbg-polars
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
