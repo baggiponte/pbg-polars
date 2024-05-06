@@ -25,7 +25,7 @@ The definitive DataFrame library
 
 ---
 
-# 📍 Keynote Outline
+# 📍 Talk Outline
 
 <v-clicks>
 
@@ -73,7 +73,7 @@ In plain terms
 
 * `pandas` but much faster, no indexes and a more expressive syntax.
   * Not a "drop-in" replacement like `modin` (for the three people out there using it).
-* Like `duckdb` but with less SQL (though you can use SQL too!).
+* Like `duckdb` but with less focus on SQL (though you can use SQL too!).
 
 </v-clicks>
 
@@ -101,6 +101,8 @@ The key ingredients
   * Efficient I/O
 * Work stealing, AKA efficient multithreading
 * Lazy evaluation enables query optimisations
+
+For a thorough introduction by its author, you should check out [this](https://www.youtube.com/watch?v=tqcudsykOGc) and [this](https://www.youtube.com/watch?v=GOOYbl3cqlc) videos.
 
 </v-clicks>
 
@@ -359,10 +361,11 @@ Stuff we can't go over right now
 
 <v-clicks>
 
-* Can use [SQL](https://pola-rs.github.io/polars/user-guide/sql/intro/)!
+* Can use [SQL](https://pola-rs.github.io/polars/user-guide/sql/intro/) or the brand new [`sql`](https://github.com/pola-rs/polars/pull/15783) method.
 * There is a [CLI](https://github.com/pola-rs/polars-cli?tab=readme-ov-file#polars-cli) too.
 * Polars plugins! Can write your own Rust extensions and hook them inside Polars query engine for incredible speed.
-  * More on this next week. No Rust, I promise.
+  * More on this at the end of this [video](https://www.youtube.com/watch?v=jKW-CBV7NUM&t=2407s)
+  * Or [this great tutorial](https://marcogorelli.github.io/polars-plugins-tutorial/) by Polars contributor Marco Gorelli. Rust knowledge somewhat required!
 
 </v-clicks>
 
