@@ -1,9 +1,0 @@
-{
-  "name": "pbg-polars",
-  "private": true,
-  "dependencies": {
-    "@slidev/cli": "^0.48.0",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest"
-  }
-}
